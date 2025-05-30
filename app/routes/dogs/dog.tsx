@@ -1,14 +1,28 @@
 import { useLoaderData } from 'react-router';
 import type { Route } from './+types/dog';
+import getToken from '~/utils/getToken';
+import getDog from '~/utils/getDog';
+import DogComponent from '~/components/Dog/Dog';
 
 export const loader = async ({ params }: Route.LoaderArgs) => {
-  return { dogId: params.dogId };
+  let token;
+  try {
+    token = await getToken();
+  } catch (error: unknown) {
+    if (error instanceof DOMException && error.code === 401) {
+      token = await getToken({ shouldRefetch: true });
+    }
+  }
+  if (!token) {
+    throw new Error('Failed to get token');
+  }
+  const dog = await getDog({ token, id: params.dogId });
+  return { dog };
 };
 
 function Dog() {
-  const { dogId } = useLoaderData<typeof loader>();
-  console.log(dogId);
-  return <div>Dog</div>;
+  const { dog } = useLoaderData<typeof loader>();
+  return <DogComponent dog={dog} />;
 }
 
 export default Dog;
