@@ -16,7 +16,7 @@
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -190,5 +190,9 @@
 
   .top-bar-content-left {
     display: block;
+  }
+
+  .top-bar-content {
+    justify-content: space-between;
   }
 }
