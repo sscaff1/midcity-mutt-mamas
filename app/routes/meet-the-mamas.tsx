@@ -1,12 +1,4 @@
-export function meta() {
-  return [
-    { title: 'Meet the Mamas - Mid City Mutt Mamas' },
-    {
-      name: 'description',
-      content: 'Meet the dedicated team behind Mid City Mutt Mamas, a New Orleans-based dog rescue organization.',
-    },
-  ];
-}
+import { Link } from 'react-router';
 
 const mamas = [
   {
@@ -53,73 +45,80 @@ const mamas = [
 
 function MeetTheMamas() {
   return (
-    <div className="space-y-12">
-      {/* Hero Section */}
-      <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
-        <h1 className="text-4xl font-bold mb-4 text-gray-800">Meet the Mamas</h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Get to know the dedicated team behind Mid City Mutt Mamas. Each of us brings our unique experience and passion
-          for animal welfare to help give dogs their second chance at life.
-        </p>
-      </section>
+    <>
+      <meta title="Meet the Mamas - Mid City Mutt Mamas" />
+      <meta
+        name="description"
+        content="Get to know the dedicated team behind Mid City Mutt Mamas, a New Orleans-based dog rescue organization."
+      />
+      <div className="space-y-12">
+        {/* Hero Section */}
+        <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
+          <h1 className="text-4xl font-bold mb-4 text-gray-800">Meet the Mamas</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Get to know the dedicated team behind Mid City Mutt Mamas. Each of us brings our unique experience and
+            passion for animal welfare to help give dogs their second chance at life.
+          </p>
+        </section>
 
-      {/* Mamas Grid */}
-      <section className="bg-white rounded-lg p-8 shadow-sm">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {mamas.map((mama, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-            >
-              <div className="aspect-w-3 aspect-h-4 relative">
-                <img src={mama.profileImg} alt={mama.name} className="w-full h-full object-cover" />
+        {/* Mamas Grid */}
+        <section className="bg-white rounded-lg p-8 shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {mamas.map((mama, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+              >
+                <div className="aspect-w-3 aspect-h-4 relative">
+                  <img src={mama.profileImg} alt={mama.name} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{mama.name}</h3>
+                  {mama.description && <p className="text-gray-600 text-sm leading-relaxed">{mama.description}</p>}
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">{mama.name}</h3>
-                {mama.description && <p className="text-gray-600 text-sm leading-relaxed">{mama.description}</p>}
-              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Join Us Section */}
+        <section className="bg-white rounded-lg p-8 shadow-sm">
+          <h2 className="text-3xl font-bold mb-8 text-gray-800">Join Our Mission</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">Adopt</h3>
+              <p className="text-gray-600 mb-4">Give a loving home to one of our rescued dogs.</p>
+              <Link
+                to="/adopt"
+                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+              >
+                Learn About Adoption →
+              </Link>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Join Us Section */}
-      <section className="bg-white rounded-lg p-8 shadow-sm">
-        <h2 className="text-3xl font-bold mb-8 text-gray-800">Join Our Mission</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Adopt</h3>
-            <p className="text-gray-600 mb-4">Give a loving home to one of our rescued dogs.</p>
-            <a
-              href="/adopt"
-              className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
-            >
-              View Available Dogs →
-            </a>
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">Foster</h3>
+              <p className="text-gray-600 mb-4">Provide temporary care for dogs in need.</p>
+              <Link
+                to="/foster"
+                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+              >
+                Learn About Fostering →
+              </Link>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">Volunteer</h3>
+              <p className="text-gray-600 mb-4">Join our team and help make a difference.</p>
+              <Link
+                to="/contact-us"
+                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+              >
+                Contact Us →
+              </Link>
+            </div>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Foster</h3>
-            <p className="text-gray-600 mb-4">Provide temporary care for dogs in need.</p>
-            <a
-              href="/foster"
-              className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
-            >
-              Learn About Fostering →
-            </a>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Volunteer</h3>
-            <p className="text-gray-600 mb-4">Join our team and help make a difference.</p>
-            <a
-              href="/contact-us"
-              className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
-            >
-              Contact Us →
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
 

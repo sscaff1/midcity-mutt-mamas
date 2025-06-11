@@ -1,9 +1,11 @@
 import { NavLink, Link } from 'react-router';
 import type { ReactNode } from 'react';
 import { useState } from 'react';
+import { FaFacebookF, FaInstagram, FaEtsy } from 'react-icons/fa';
 import cn from 'clsx';
 import './Layout.css';
 import Footer from '../Footer/Footer';
+import { ETSY_URL, FACEBOOK_URL, INSTAGRAM_URL } from '~/utils/constants';
 
 interface LayoutProps {
   children?: ReactNode;
@@ -23,6 +25,39 @@ function Layout({ children }: LayoutProps) {
 
   return (
     <div className="layout-container">
+      {/* Top Bar */}
+      <div className="top-bar">
+        <div className="top-bar-content">
+          <div className="top-bar-content-left">
+            <span>Contact us at:&nbsp;&nbsp;</span>
+            <a href="mailto:midcitymutt@gmail.com">midcitymutt@gmail.com</a>
+          </div>
+          <div className="social-links">
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Facebook"
+            >
+              <FaFacebookF className="social-icon" />
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Instagram"
+            >
+              <FaInstagram className="social-icon" />
+            </a>
+            <a href={ETSY_URL} target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Etsy">
+              <FaEtsy className="social-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+
       <header className="header">
         <nav className="nav-container">
           <div className="nav-content">
