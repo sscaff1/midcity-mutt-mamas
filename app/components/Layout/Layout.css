@@ -167,6 +167,10 @@
   padding: 2rem 1rem;
 }
 
+.top-bar-content-left {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .mobile-menu-button {
     display: none;
@@ -182,5 +186,9 @@
 
   .footer-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .top-bar-content-left {
+    display: block;
   }
 }
