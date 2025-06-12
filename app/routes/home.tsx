@@ -2,8 +2,17 @@ import { Link, useLoaderData, data } from 'react-router';
 import getDogs from '../utils/getDogs';
 import getToken from '../utils/getToken';
 import Dogs from '../components/Dogs/Dogs';
+import { getFromCache, setInCache } from '~/utils/cache';
 
-export const loader = async () => {
+export async function loader() {
+  const cacheKey = 'dogs';
+  const cached = getFromCache(cacheKey);
+
+  if (cached) {
+    console.log('Cache hit');
+    return data(cached, { headers: { 'X-Cache': 'HIT' } });
+  }
+
   let token;
   try {
     token = await getToken();
@@ -16,17 +25,10 @@ export const loader = async () => {
     throw new Error('Failed to get token');
   }
   const dogs = await getDogs({ token });
-  return data(dogs, {
-    headers: {
-      'Server-Timing': `page;dur=${86400};desc="Page query"`,
-    },
-  });
-};
 
-export function headers() {
-  return {
-    'Cache-Control': 'max-age=3600, s-maxage=86400',
-  };
+  setInCache(cacheKey, dogs, 1000 * 60 * 360); // cache for 6 hours
+  console.log('Cache miss');
+  return data(dogs, { headers: { 'X-Cache': 'MISS' } });
 }
 
 function Home() {
