@@ -2,7 +2,9 @@ const cache = new Map();
 
 export function getFromCache(key: string) {
   const entry = cache.get(key);
-  if (!entry) return null;
+  if (!entry) {
+    return null;
+  }
 
   const isExpired = Date.now() > entry.expiresAt;
   if (isExpired) {
