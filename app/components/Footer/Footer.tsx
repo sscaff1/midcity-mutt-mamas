@@ -56,6 +56,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-copyright">© {new Date().getFullYear()} Mid City Mutt Mamas. All rights reserved.</div>
+        <div className="footer-maje">Website in loving memory of Majé ❤️</div>
       </div>
     </footer>
   );

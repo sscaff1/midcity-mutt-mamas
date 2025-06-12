@@ -72,6 +72,13 @@
   color: #4b5563; /* text-gray-600 */
 }
 
+.footer-maje {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #4b5563; /* text-gray-600 */
+}
+
 @media (min-width: 768px) {
   .footer-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
