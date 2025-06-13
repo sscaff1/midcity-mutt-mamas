@@ -40,6 +40,7 @@ function Home() {
         name="description"
         content="Welcome to Mid City Mutt Mamas, a New Orleans-based dog rescue organization dedicated to saving and rehoming dogs in need."
       />
+      <title>Home | Mid City Mutt Mamas</title>
       <div className="space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">

@@ -9,6 +9,7 @@ function Donate() {
         name="description"
         content="Support Mid City Mutt Mamas by making a donation to help us continue our mission of rescuing and rehoming dogs in need."
       />
+      <title>Donate | Mid City Mutt Mamas</title>
       <div className="space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">

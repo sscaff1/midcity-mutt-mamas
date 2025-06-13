@@ -8,6 +8,7 @@ function Foster() {
         name="description"
         content="Learn about our fostering program and how you can help provide temporary homes for dogs in need at Mid City Mutt Mamas."
       />
+      <title>Foster | Mid City Mutt Mamas</title>
       <div className="space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">

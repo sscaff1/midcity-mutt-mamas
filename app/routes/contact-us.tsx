@@ -8,6 +8,7 @@ function ContactUs() {
         name="description"
         content="Get in touch with Mid City Mutt Mamas to learn more about adoption, fostering, or volunteering opportunities."
       />
+      <title>Contact Us | Mid City Mutt Mamas</title>
       <div className="space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">

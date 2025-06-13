@@ -22,7 +22,14 @@ export const loader = async ({ params }: Route.LoaderArgs) => {
 
 function Dog() {
   const { dog } = useLoaderData<typeof loader>();
-  return <DogComponent dog={dog} />;
+  return (
+    <>
+      <meta title={`${dog.name} | Mid City Mutt Mamas`} />
+      <meta name="description" content={`Learn more about ${dog.name} and their story.`} />
+      <title>{`${dog.name} | Mid City Mutt Mamas`}</title>
+      <DogComponent dog={dog} />
+    </>
+  );
 }
 
 export default Dog;

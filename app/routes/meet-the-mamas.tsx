@@ -51,6 +51,7 @@ function MeetTheMamas() {
         name="description"
         content="Get to know the dedicated team behind Mid City Mutt Mamas, a New Orleans-based dog rescue organization."
       />
+      <title>Meet the Mamas | Mid City Mutt Mamas</title>
       <div className="space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
