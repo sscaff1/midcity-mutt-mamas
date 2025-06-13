@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import './DogCard.css';
 import { Link } from 'react-router';
 
