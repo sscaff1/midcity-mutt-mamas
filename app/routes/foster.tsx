@@ -44,7 +44,7 @@ function Foster() {
         <section className="bg-white rounded-lg p-8 shadow-sm">
           <h2 className="text-3xl font-bold mb-8 text-gray-800">Why Foster?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-[#11b7b34d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
                 <i className="bi bi-heart-fill text-[#11b7b3] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Save Lives</h3>
@@ -54,7 +54,7 @@ function Foster() {
                 save more lives.
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-[#11b7b34d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
                 <i className="bi bi-house-fill text-[#11b7b3] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Home Environment</h3>
@@ -63,7 +63,7 @@ function Foster() {
                 Dogs thrive in home environments where they can learn house manners and receive individual attention.
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-[#11b7b34d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
                 <i className="bi bi-star-fill text-[#11b7b3] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Perfect Match</h3>
