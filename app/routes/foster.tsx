@@ -11,13 +11,34 @@ function Foster() {
       <title>Foster | Mid City Mutt Mamas</title>
       <div className="space-y-12">
         {/* Hero Section */}
-        <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
-          <h1 className="text-4xl font-bold mb-4 text-gray-800">Become a Foster Parent</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Fostering saves lives! By opening your home to a foster dog, you&apos;re giving them a second chance while
-            they wait for their forever family.
-          </p>
-        </section>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm flex flex-col justify-center">
+            <h1 className="text-4xl font-bold mb-4 text-gray-800">Become a Foster Parent</h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Fostering saves lives! By opening your home to a foster dog, you&apos;re giving them a second chance while
+              they wait for their forever family.
+            </p>
+            <a
+              className="inline-block mt-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              target="_blank"
+              href="/foster-app.pdf"
+              rel="noreferrer noopener"
+            >
+              Download Foster Application
+            </a>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Download the above application and email it to{' '}
+              <a href="mailto:midcitymutt@gmail.com">midcitymutt@gmail.com</a>
+            </p>
+          </section>
+          <section className="flex items-center justify-center">
+            <img
+              src="/maje.jpeg"
+              alt="Foster Hero"
+              className="w-full h-[50vh] object-cover object-[center_10%] rounded-lg"
+            />
+          </section>
+        </div>
 
         {/* Why Foster */}
         <section className="bg-white rounded-lg p-8 shadow-sm">
@@ -64,11 +85,19 @@ function Foster() {
                 <div className="w-8 h-8 rounded-full bg-[#11b7b3] text-white flex items-center justify-center font-bold mr-3">
                   1
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">Apply</h3>
+                <h3 className="text-xl font-bold text-gray-800">Apply</h3>
               </div>
               <p className="text-gray-600">
-                Complete our foster application. We&apos;ll review your information and discuss your preferences and
-                experience.
+                Complete our{' '}
+                <a
+                  target="_blank"
+                  href="/foster-app.pdf"
+                  rel="noreferrer noopener"
+                  className="font-bold text-[#11b7b3] hover:text-[#0a7372]"
+                >
+                  foster application
+                </a>
+                . We&apos;ll review your information and discuss your preferences and experience.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
