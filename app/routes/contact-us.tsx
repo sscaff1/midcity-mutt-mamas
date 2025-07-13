@@ -9,7 +9,7 @@ function ContactUs() {
         content="Get in touch with Mid City Mutt Mamas to learn more about adoption, fostering, or volunteering opportunities."
       />
       <title>Contact Us | Mid City Mutt Mamas</title>
-      <div className="space-y-12">
+      <div className="flex-grow max-w-[1280px] mx-auto px-4 py-8 space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
           <h1 className="text-4xl font-bold mb-4 text-gray-800">Contact Us</h1>
@@ -25,7 +25,7 @@ function ContactUs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-envelope-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-envelope-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Email Us</h3>
               </div>
               <p className="text-gray-600 mb-4">
@@ -33,14 +33,14 @@ function ContactUs() {
               </p>
               <a
                 href={`mailto:${EMAIL_URL}`}
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 {EMAIL_URL} →
               </a>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-clock-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-clock-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Response Time</h3>
               </div>
               <p className="text-gray-600">
@@ -65,7 +65,7 @@ function ContactUs() {
                   href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
                 >
                   Facebook →
                 </a>
@@ -73,7 +73,7 @@ function ContactUs() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
                 >
                   Instagram →
                 </a>
@@ -89,7 +89,7 @@ function ContactUs() {
                   href={ETSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
                 >
                   Etsy →
                 </a>

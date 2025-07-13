@@ -52,7 +52,8 @@ function MeetTheMamas() {
         content="Get to know the dedicated team behind Mid City Mutt Mamas, a New Orleans-based dog rescue organization."
       />
       <title>Meet the Mamas | Mid City Mutt Mamas</title>
-      <div className="space-y-12">
+
+      <div className="flex-grow max-w-[1280px] mx-auto px-4 py-8 space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
           <h1 className="text-4xl font-bold mb-4 text-gray-800">Meet the Mamas</h1>
@@ -91,7 +92,7 @@ function MeetTheMamas() {
               <p className="text-gray-600 mb-4">Give a loving home to one of our rescued dogs.</p>
               <Link
                 to="/adopt"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Learn About Adoption →
               </Link>
@@ -101,7 +102,7 @@ function MeetTheMamas() {
               <p className="text-gray-600 mb-4">Provide temporary care for dogs in need.</p>
               <Link
                 to="/foster"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Learn About Fostering →
               </Link>
@@ -111,7 +112,7 @@ function MeetTheMamas() {
               <p className="text-gray-600 mb-4">Join our team and help make a difference.</p>
               <Link
                 to="/contact-us"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Contact Us →
               </Link>

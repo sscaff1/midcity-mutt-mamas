@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import './foster.css';
 
 function Foster() {
   return (
@@ -9,17 +10,18 @@ function Foster() {
         content="Learn about our fostering program and how you can help provide temporary homes for dogs in need at Mid City Mutt Mamas."
       />
       <title>Foster | Mid City Mutt Mamas</title>
-      <div className="space-y-12">
-        {/* Hero Section */}
+      {/* Hero Section */}
+
+      <div className="top-section">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm flex flex-col justify-center">
+          <section className="text-center py-8 px-4">
             <h1 className="text-4xl font-bold mb-4 text-gray-800">Become a Foster Parent</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Fostering saves lives! By opening your home to a foster dog, you&apos;re giving them a second chance while
               they wait for their forever family.
             </p>
             <a
-              className="inline-block mt-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              className="inline-block mt-6 text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
               target="_blank"
               href="/foster-app.pdf"
               rel="noreferrer noopener"
@@ -33,20 +35,21 @@ function Foster() {
           </section>
           <section className="flex items-center justify-center">
             <img
-              src="/maje.jpeg"
+              src="/maje.jpg"
               alt="Foster Hero"
-              className="w-full h-[50vh] object-cover object-[center_10%] rounded-lg"
+              className="h-[350px] object-cover object-[center_10%] rounded-lg drop-shadow-lg border-4 border-white"
             />
           </section>
         </div>
-
+      </div>
+      <div className="flex-grow max-w-[1280px] mx-auto px-4 py-8 space-y-12">
         {/* Why Foster */}
         <section className="bg-white rounded-lg p-8 shadow-sm">
           <h2 className="text-3xl font-bold mb-8 text-gray-800">Why Foster?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#11b7b34d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-[#5f85764d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-heart-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-heart-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Save Lives</h3>
               </div>
               <p className="text-gray-600">
@@ -54,18 +57,18 @@ function Foster() {
                 save more lives.
               </p>
             </div>
-            <div className="bg-[#11b7b34d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-[#5f85764d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-house-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-house-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Home Environment</h3>
               </div>
               <p className="text-gray-600">
                 Dogs thrive in home environments where they can learn house manners and receive individual attention.
               </p>
             </div>
-            <div className="bg-[#11b7b34d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-[#5f85764d] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-star-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-star-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Perfect Match</h3>
               </div>
               <p className="text-gray-600">
@@ -82,7 +85,7 @@ function Foster() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 rounded-full bg-[#11b7b3] text-white flex items-center justify-center font-bold mr-3">
+                <div className="w-8 h-8 rounded-full bg-[#5f8576] text-white flex items-center justify-center font-bold mr-3">
                   1
                 </div>
                 <h3 className="text-xl font-bold text-gray-800">Apply</h3>
@@ -93,7 +96,7 @@ function Foster() {
                   target="_blank"
                   href="/foster-app.pdf"
                   rel="noreferrer noopener"
-                  className="font-bold text-[#11b7b3] hover:text-[#0a7372]"
+                  className="font-bold text-[#5f8576] hover:text-[#0a7372]"
                 >
                   foster application
                 </a>
@@ -102,7 +105,7 @@ function Foster() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 rounded-full bg-[#11b7b3] text-white flex items-center justify-center font-bold mr-3">
+                <div className="w-8 h-8 rounded-full bg-[#5f8576] text-white flex items-center justify-center font-bold mr-3">
                   2
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800">Match</h3>
@@ -114,7 +117,7 @@ function Foster() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 rounded-full bg-[#11b7b3] text-white flex items-center justify-center font-bold mr-3">
+                <div className="w-8 h-8 rounded-full bg-[#5f8576] text-white flex items-center justify-center font-bold mr-3">
                   3
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800">Support</h3>
@@ -126,7 +129,7 @@ function Foster() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 rounded-full bg-[#11b7b3] text-white flex items-center justify-center font-bold mr-3">
+                <div className="w-8 h-8 rounded-full bg-[#5f8576] text-white flex items-center justify-center font-bold mr-3">
                   4
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800">Adoption</h3>
@@ -144,7 +147,7 @@ function Foster() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-house-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-house-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Home & Environment</h3>
               </div>
               <ul className="text-gray-600 space-y-2">
@@ -156,7 +159,7 @@ function Foster() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-calendar-check text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-calendar-check text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Time & Commitment</h3>
               </div>
               <ul className="text-gray-600 space-y-2">
@@ -205,7 +208,7 @@ function Foster() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact-us"
-                className="inline-block px-6 py-3 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors text-lg"
+                className="inline-block px-6 py-3 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors text-lg"
               >
                 Contact Us to Foster →
               </Link>

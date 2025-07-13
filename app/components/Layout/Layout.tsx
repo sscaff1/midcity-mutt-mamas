@@ -106,7 +106,7 @@ function Layout({ children }: LayoutProps) {
         </nav>
       </header>
 
-      <main className="main-content">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
