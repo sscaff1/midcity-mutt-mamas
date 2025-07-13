@@ -62,7 +62,7 @@ function Home() {
           </p>
         </div>
       </section>
-      <div className="flex-grow space-y-12">
+      <div className="flex-grow">
         {/* Silent Auction Section */}
         <div className="px-4 py-8 max-w-[1280px] mx-auto">
           <section className="bg-white rounded-lg p-8 shadow-sm">
