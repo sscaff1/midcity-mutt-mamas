@@ -112,9 +112,9 @@ function Home() {
           />
           <div className="relative z-10 ">
             <h2 className="text-6xl font-bold mb-8 text-gray-800 text-center">How You Can Help</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                <h3 className="text-3xl font-semibold mb-3 text-gray-800">
                   <PiDog className="inline-block mr-2 mt-[-2px]" /> Adopt
                 </h3>
                 <p className="text-gray-600 mb-4">Give a loving home to one of our rescued dogs.</p>
@@ -126,7 +126,7 @@ function Home() {
                 </Link>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                <h3 className="text-3xl font-semibold mb-3 text-gray-800">
                   <PiPawPrint className="inline-block mr-2 mt-[-2px]" /> Foster
                 </h3>
                 <p className="text-gray-600 mb-4">Provide temporary care for dogs in need.</p>
@@ -138,7 +138,7 @@ function Home() {
                 </Link>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                <h3 className="text-3xl font-semibold mb-3 text-gray-800">
                   <PiPiggyBank className="inline-block mr-2 mt-[-2px]" /> Donate
                 </h3>
                 <p className="text-gray-600 mb-4">Support our mission with your contribution.</p>
