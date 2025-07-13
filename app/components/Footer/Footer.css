@@ -33,7 +33,7 @@
 }
 
 .footer-link:hover {
-  color: #11b7b3;
+  color: #5f8576;
 }
 
 .social-links {
@@ -55,7 +55,7 @@
 }
 
 .social-link:hover {
-  background-color: #11b7b3;
+  background-color: #5f8576;
   color: white;
   transform: translateY(-2px);
 }

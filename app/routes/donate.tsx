@@ -10,7 +10,7 @@ function Donate() {
         content="Support Mid City Mutt Mamas by making a donation to help us continue our mission of rescuing and rehoming dogs in need."
       />
       <title>Donate | Mid City Mutt Mamas</title>
-      <div className="space-y-12">
+      <div className="flex-grow max-w-[1280px] mx-auto px-4 py-8 space-y-12">
         {/* Hero Section */}
         <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
           <h1 className="text-4xl font-bold mb-4 text-gray-800">Support Our Mission</h1>
@@ -32,7 +32,7 @@ function Donate() {
                 href={VENMO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Donate with Venmo →
               </a>
@@ -44,7 +44,7 @@ function Donate() {
                 href={PAYPAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Donate with PayPal →
               </a>
@@ -56,7 +56,7 @@ function Donate() {
                 href={ZEFFY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Donate with Zeffy →
               </a>
@@ -70,28 +70,28 @@ function Donate() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-heart-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-heart-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Medical Care</h3>
               </div>
               <p className="text-gray-600">Vaccinations, spay/neuter surgeries, and emergency medical treatment</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-house-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-house-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Shelter & Care</h3>
               </div>
               <p className="text-gray-600">Food, shelter, and daily care for our rescue dogs</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-book-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-book-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Training</h3>
               </div>
               <p className="text-gray-600">Behavioral training and socialization programs</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-truck-fill text-[#11b7b3] text-2xl mr-3"></i>
+                <i className="bi bi-truck-fill text-[#5f8576] text-2xl mr-3"></i>
                 <h3 className="text-xl font-semibold text-gray-800">Transportation</h3>
               </div>
               <p className="text-gray-600">Rescue missions and transport to forever homes</p>
@@ -111,7 +111,7 @@ function Donate() {
               </p>
               <Link
                 to="/contact-us"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Contact Us →
               </Link>
@@ -126,7 +126,7 @@ function Donate() {
                   href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
                 >
                   Facebook →
                 </a>
@@ -134,7 +134,7 @@ function Donate() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
                 >
                   Instagram →
                 </a>

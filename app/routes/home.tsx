@@ -45,7 +45,7 @@ function Home() {
         content="Welcome to Mid City Mutt Mamas, a New Orleans-based dog rescue organization dedicated to saving and rehoming dogs in need."
       />
       <title>Home | Mid City Mutt Mamas</title>
-      <div className="space-y-12">
+      <div className="flex-grow max-w-[1280px] mx-auto px-4 py-8 space-y-12">
         {/* Silent Auction Section */}
         <section className="bg-white rounded-lg p-8 shadow-sm">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Silent Auction</h2>
@@ -77,7 +77,7 @@ function Home() {
                 href="https://www.zeffy.com/en-US/ticketing/krewe-of-mid-city-mutt-mamass-silent-auction-2?fbclid=IwY2xjawK__xVleHRuA2FlbQIxMQBicmlkETFxV0RpbnplNmFGYkVVVFRjAR4DsqBj4pO4UeiADBuLrm5sr84cKoLGz7pTSRmImQ5hBXuVGfuKTwNNA2cO4g_aem_zDQw_51kddcslomjBPW4hA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors font-semibold text-lg"
+                className="inline-block px-6 py-3 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors font-semibold text-lg"
               >
                 View Silent Auction →
               </a>
@@ -112,7 +112,7 @@ function Home() {
               <p className="text-gray-600 mb-4">Give a loving home to one of our rescued dogs.</p>
               <Link
                 to="/adopt"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Learn More →
               </Link>
@@ -122,7 +122,7 @@ function Home() {
               <p className="text-gray-600 mb-4">Provide temporary care for dogs in need.</p>
               <Link
                 to="/foster"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Become a Foster →
               </Link>
@@ -132,7 +132,7 @@ function Home() {
               <p className="text-gray-600 mb-4">Support our mission with your contribution.</p>
               <Link
                 to="/donate"
-                className="inline-block px-4 py-2 bg-[#11b7b3] text-white rounded-md hover:bg-[#0fa39f] transition-colors"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
               >
                 Donate Now →
               </Link>
