@@ -1,5 +1,4 @@
 import { Link } from 'react-router';
-import './foster.css';
 
 function Foster() {
   return (
@@ -12,7 +11,7 @@ function Foster() {
       <title>Foster | Mid City Mutt Mamas</title>
       {/* Hero Section */}
 
-      <div className="top-section">
+      <div className="bg-[url(/papyrus.png)] bg-repeat py-6 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <section className="text-center py-8 px-4">
             <h1 className="text-4xl font-bold mb-4 text-gray-800">Become a Foster Parent</h1>

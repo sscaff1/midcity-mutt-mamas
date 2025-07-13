@@ -46,7 +46,7 @@ export interface Animal {
     medium: string;
     large: string;
     full: string;
-  };
+  }[];
   primary_photo_cropped: {
     small: string;
     medium: string;
