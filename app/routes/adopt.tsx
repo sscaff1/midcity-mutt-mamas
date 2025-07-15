@@ -17,7 +17,7 @@ function Adopt() {
       </div>
       <div className="flex-grow max-w-[1280px] mx-auto px-4">
         {/* Hero Section */}
-        <section className="text-white text-center py-8 px-4 bg-transparent rounded-lg shadow-sm">
+        <section className="text-white text-center py-8 px-4 bg-transparent">
           <h1 className="text-4xl font-bold mb-4">Adopt a Dog</h1>
           <p className="text-xl max-w-2xl mx-auto">
             Give a loving home to one of our rescued dogs. Each adoption helps us save more lives and continue our
