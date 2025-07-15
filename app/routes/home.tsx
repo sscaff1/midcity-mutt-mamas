@@ -50,7 +50,7 @@ function Home() {
         <img
           src="/homepage-hero.jpg"
           alt="Mid City Mutt Mamas"
-          className="absolute inset-0 w-full h-full object-cover scale-x-[-1] object-top-right"
+          className="absolute inset-0 w-full h-full object-cover scale-x-[-1] sm:object-top-right object-[15%_0%] sm:brightness-100 brightness-80"
         />
         <div className="relative z-10 max-w-sm">
           <h1 className="text-4xl font-bold mb-4 text-white">Welcome to Mid City Mutt Mamas</h1>
