@@ -33,7 +33,7 @@ function ContactUs() {
               </p>
               <a
                 href={`mailto:${EMAIL_URL}`}
-                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
+                className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
               >
                 {EMAIL_URL} →
               </a>
@@ -65,7 +65,7 @@ function ContactUs() {
                   href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
+                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
                 >
                   Facebook →
                 </a>
@@ -73,7 +73,7 @@ function ContactUs() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
+                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
                 >
                   Instagram →
                 </a>
@@ -89,7 +89,7 @@ function ContactUs() {
                   href={ETSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
+                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
                 >
                   Etsy →
                 </a>

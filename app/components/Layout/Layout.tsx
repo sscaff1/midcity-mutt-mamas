@@ -24,9 +24,10 @@ function Layout({ children }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const isContactUsPage = location.pathname === '/contact-us';
 
   return (
-    <div className={cn('layout-container', { 'layout-home': isHomePage })}>
+    <div className={cn('layout-container', { 'layout-alternate': isHomePage || isContactUsPage })}>
       {/* Top Bar */}
       <div className="top-bar">
         <div className="top-bar-content">
