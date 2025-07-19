@@ -5,6 +5,10 @@
   background-color: #5f8576;
 }
 
+.layout-container.layout-home {
+  background-color: #4974a5;
+}
+
 .top-bar {
   background-color: #3b534a;
   border-bottom: 1px solid #537467;

@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router';
+import { NavLink, Link, useLocation } from 'react-router';
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 import { FaFacebookF, FaInstagram, FaEtsy } from 'react-icons/fa';
@@ -22,9 +22,11 @@ const navLinks = [
 
 function Layout({ children }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   return (
-    <div className="layout-container">
+    <div className={cn('layout-container', { 'layout-home': isHomePage })}>
       {/* Top Bar */}
       <div className="top-bar">
         <div className="top-bar-content">
