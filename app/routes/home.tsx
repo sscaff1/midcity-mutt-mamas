@@ -3,8 +3,8 @@ import getDogs from '../utils/getDogs';
 import getToken from '../utils/getToken';
 import Dogs from '../components/Dogs/Dogs';
 import { getFromCache, setInCache } from '~/utils/cache';
-import RandomDog from '~/components/RandomDog/RandomDog';
 import { PiDog, PiPawPrint, PiPiggyBank } from 'react-icons/pi';
+import type { Animal } from '~/types/Animal';
 
 export async function loader() {
   const cacheKey = 'dogs';
@@ -26,7 +26,13 @@ export async function loader() {
   if (!token) {
     throw new Error('Failed to get token');
   }
-  const dogs = await getDogs({ token });
+  let dogs;
+  try {
+    dogs = await getDogs({ token });
+  } catch (error) {
+    console.error(error);
+    dogs = [] as Animal[];
+  }
 
   setInCache(cacheKey, dogs, 1000 * 60 * 360); // cache for 6 hours
   console.log('Cache miss');
