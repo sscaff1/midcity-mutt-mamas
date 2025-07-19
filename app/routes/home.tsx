@@ -63,36 +63,6 @@ function Home() {
         </div>
       </section>
       <div className="flex-grow">
-        {/* Silent Auction Section */}
-        <div className="px-4 py-8 max-w-[1280px] mx-auto">
-          <section className="bg-white rounded-lg p-8 shadow-sm">
-            <h2 className="text-3xl font-bold mb-6 text-gray-800">Silent Auction</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <RandomDog dogs={dogs} />
-              <div className="text-center md:text-left">
-                <p className="text-lg text-gray-700 mb-6">
-                  🎉 Our Silent Auction is LIVE for the Krewe of Mid City Mutt Mamas doggos! 🐾
-                </p>
-                <p className="text-gray-600 mb-6">
-                  Bid on amazing items and help us raise much-needed funds for the pups in our care. The auction is
-                  still open for new items, so if you have something to donate—big or small—just DM me to add it in!
-                </p>
-                <p className="text-gray-600 mb-8">
-                  Let&apos;s make a difference together. Every bid helps a dog in need 💛
-                </p>
-                <a
-                  href="https://www.zeffy.com/en-US/ticketing/krewe-of-mid-city-mutt-mamass-silent-auction-2?fbclid=IwY2xjawK__xVleHRuA2FlbQIxMQBicmlkETFxV0RpbnplNmFGYkVVVFRjAR4DsqBj4pO4UeiADBuLrm5sr84cKoLGz7pTSRmImQ5hBXuVGfuKTwNNA2cO4g_aem_zDQw_51kddcslomjBPW4hA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors font-semibold text-lg"
-                >
-                  View Silent Auction →
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-
         {/* Adoptable Dogs Section */}
         <div className="px-4 py-8 max-w-[1280px] mx-auto">
           <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
