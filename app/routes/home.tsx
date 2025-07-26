@@ -68,67 +68,63 @@ function Home() {
           </p>
         </div>
       </section>
-      <div className="flex-grow">
-        {/* Adoptable Dogs Section */}
-        <div className="px-4 py-8 max-w-[1280px] mx-auto">
-          <section className="text-center py-8 px-4 bg-white rounded-lg shadow-sm">
-            <h2 className="text-3xl font-bold mb-6 text-gray-800">Adoptable Dogs</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Dogs dogs={dogs} />
-            </div>
-          </section>
+      {/* Adoptable Dogs Section */}
+      <section className="text-center py-8 px-4 bg-white border-b border-gray-200">
+        <h2 className="text-3xl font-bold mb-6 text-gray-800">Adoptable Dogs</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Dogs dogs={dogs} />
         </div>
+      </section>
 
-        {/* How to Help Section */}
-        <section className="p-8 p-y-12 relative">
-          <img
-            src="/background-paw.jpg"
-            alt="Background"
-            className="absolute inset-0 w-full h-full object-cover brightness-170"
-          />
-          <div className="relative z-10 ">
-            <h2 className="text-6xl font-bold mb-8 text-gray-800 text-center">How You Can Help</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <h3 className="text-3xl font-semibold mb-3 text-gray-800">
-                  <PiDog className="inline-block mr-2 mt-[-2px]" /> Adopt
-                </h3>
-                <p className="text-gray-600 mb-4">Give a loving home to one of our rescued dogs.</p>
-                <Link
-                  to="/adopt"
-                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
-                >
-                  Learn More →
-                </Link>
-              </div>
-              <div>
-                <h3 className="text-3xl font-semibold mb-3 text-gray-800">
-                  <PiPawPrint className="inline-block mr-2 mt-[-2px]" /> Foster
-                </h3>
-                <p className="text-gray-600 mb-4">Provide temporary care for dogs in need.</p>
-                <Link
-                  to="/foster"
-                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
-                >
-                  Become a Foster →
-                </Link>
-              </div>
-              <div>
-                <h3 className="text-3xl font-semibold mb-3 text-gray-800">
-                  <PiPiggyBank className="inline-block mr-2 mt-[-2px]" /> Donate
-                </h3>
-                <p className="text-gray-600 mb-4">Support our mission with your contribution.</p>
-                <Link
-                  to="/donate"
-                  className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
-                >
-                  Donate Now →
-                </Link>
-              </div>
+      {/* How to Help Section */}
+      <section className="p-8 p-y-12 relative">
+        <img
+          src="/background-paw.jpg"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover brightness-170"
+        />
+        <div className="relative z-10 ">
+          <h2 className="text-6xl font-bold mb-8 text-gray-800 text-center">How You Can Help</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <h3 className="text-3xl font-semibold mb-3 text-gray-800">
+                <PiDog className="inline-block mr-2 mt-[-2px]" /> Adopt
+              </h3>
+              <p className="text-gray-600 mb-4">Give a loving home to one of our rescued dogs.</p>
+              <Link
+                to="/adopt"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
+              >
+                Learn More →
+              </Link>
+            </div>
+            <div>
+              <h3 className="text-3xl font-semibold mb-3 text-gray-800">
+                <PiPawPrint className="inline-block mr-2 mt-[-2px]" /> Foster
+              </h3>
+              <p className="text-gray-600 mb-4">Provide temporary care for dogs in need.</p>
+              <Link
+                to="/foster"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
+              >
+                Become a Foster →
+              </Link>
+            </div>
+            <div>
+              <h3 className="text-3xl font-semibold mb-3 text-gray-800">
+                <PiPiggyBank className="inline-block mr-2 mt-[-2px]" /> Donate
+              </h3>
+              <p className="text-gray-600 mb-4">Support our mission with your contribution.</p>
+              <Link
+                to="/donate"
+                className="inline-block px-4 py-2 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors"
+              >
+                Donate Now →
+              </Link>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }
