@@ -68,6 +68,21 @@ function Home() {
           </p>
         </div>
       </section>
+      {/* Events section */}
+      <section className="py-32 px-8 relative">
+        <img
+          src="/events-background.jpg"
+          alt="Mid City Mutt Mamas"
+          className="absolute inset-0 w-full h-full object-cover opacity-70 object-[30%_20%]"
+        />
+        <div className="absolute inset-0 w-full h-full bg-linear-to-r from-[#3cb4e5] to-[#3cb4e5] opacity-60"></div>
+        <div className="relative z-10 max-w-sm text-center mx-auto">
+          <h1 className="text-5xl font-bold mb-4 text-white">Come meet an adoptable dog!</h1>
+          <p className="text-3xl text-white">
+            We'll be at Fur BeBe on Saturday Aug. 9th from 9-11am with one of our adoptable pups
+          </p>
+        </div>
+      </section>
       {/* Adoptable Dogs Section */}
       <section className="text-center py-8 px-4 bg-white border-b border-gray-200">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Adoptable Dogs</h2>
