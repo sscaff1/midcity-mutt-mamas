@@ -77,10 +77,25 @@ function Home() {
         />
         <div className="absolute inset-0 w-full h-full bg-linear-to-r from-[#3cb4e5] to-[#3cb4e5] opacity-60"></div>
         <div className="relative z-10 max-w-sm text-center mx-auto">
-          <h1 className="text-5xl font-bold mb-4 text-white">Come meet an adoptable dog!</h1>
+          <h1 className="text-5xl font-bold mb-4 text-white">Sat. Aug. 9th</h1>
           <p className="text-3xl text-white">
-            We'll be at Fur BeBe on Saturday Aug. 9th from 9-11am with one of our adoptable pups
+            We'll be at Fur BeBe on Saturday Aug. 9th from 9-11am with one of our adoptable pups, come by and say hi!
           </p>
+        </div>
+      </section>
+
+      {/* Events section */}
+      <section className="py-16 px-8 relative bg-[url('/smallbeerbg.jpg')] bg-repeat">
+        <div className="absolute w-full h-full inset-0 bg-white/30 backdrop-invert backdrop-opacity-10" />
+        <div className="flex flex-col md:flex-row items-center justify-content-center max-w-xl gap-8 mx-auto">
+          <img src="/abita.jpg" alt="abita" className="rounded-full w-32 h-32 mx-auto" />
+          <div className="relative z-10 text-center">
+            <h1 className="text-5xl font-bold mb-4 text-black">Sat. Aug. 16th</h1>
+            <p className="text-3xl text-black">
+              Come join us at Jefferson Feed from 11 am - 1 pm and then at Abita New Orleans from 2 pm - 4 pm. Meet some
+              of our adorable adoptable pups, grab some delicious brews, and help us save some lives!
+            </p>
+          </div>
         </div>
       </section>
       {/* Adoptable Dogs Section */}
