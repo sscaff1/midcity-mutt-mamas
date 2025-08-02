@@ -3,8 +3,9 @@ import getDogs from '../utils/getDogs';
 import getToken from '../utils/getToken';
 import Dogs from '../components/Dogs/Dogs';
 import { getFromCache, setInCache } from '~/utils/cache';
-import { PiDog, PiPawPrint, PiPiggyBank } from 'react-icons/pi';
+import { PiDog, PiPawPrint, PiPiggyBank, PiMapTrifold } from 'react-icons/pi';
 import type { Animal } from '~/types/Animal';
+import './home.css';
 
 export async function loader() {
   const cacheKey = 'dogs';
@@ -69,35 +70,52 @@ function Home() {
         </div>
       </section>
       {/* Events section */}
-      <section className="py-32 px-8 relative">
-        <img
-          src="/events-background.jpg"
-          alt="Mid City Mutt Mamas"
-          className="absolute inset-0 w-full h-full object-cover opacity-70 object-[30%_20%]"
-        />
-        <div className="absolute inset-0 w-full h-full bg-linear-to-r from-[#3cb4e5] to-[#3cb4e5] opacity-60"></div>
-        <div className="relative z-10 max-w-sm text-center mx-auto">
-          <h1 className="text-5xl font-bold mb-4 text-white">Sat. Aug. 9th</h1>
-          <p className="text-3xl text-white">
-            We'll be at Fur BeBe on Saturday Aug. 9th from 9-11am with one of our adoptable pups, come by and say hi!
-          </p>
-        </div>
-      </section>
+      <section className="py-12 px-8 relative events-root grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 className="text-5xl font-bold mb-4 text-black">Upcoming Events</h2>
+          <div className="text-black">
+            <h3 className="text-4xl font-bold">Sat. Aug. 9th | 9-11am</h3>
+            <h3 className="text-2xl font-bold">
+              Fur BeBe
+              <a href="https://maps.app.goo.gl/itFGrUffiSZGdKNg8" target="_blank" rel="noreferrer noopener">
+                <PiMapTrifold className="inline-block ml-2" />
+              </a>
+            </h3>
+            <p className="text-xl">
+              We'll be at Fur BeBe on Saturday Aug. 9th from 9-11am! Join us to meet some adoptable pups and listen to
+              live tunes by Craig Cortello.
+            </p>
+          </div>
 
-      {/* Events section */}
-      <section className="py-16 px-8 relative bg-[url('/smallbeerbg.jpg')] bg-repeat">
-        <div className="absolute w-full h-full inset-0 bg-white/30 backdrop-invert backdrop-opacity-10" />
-        <div className="flex flex-col md:flex-row items-center justify-content-center max-w-xl gap-8 mx-auto">
-          <img src="/abita.jpg" alt="abita" className="rounded-full w-32 h-32 mx-auto" />
-          <div className="relative z-10 text-center">
-            <h1 className="text-5xl font-bold mb-4 text-black">Sat. Aug. 16th</h1>
-            <p className="text-3xl text-black">
-              Come join us at Jefferson Feed from 11 am - 1 pm and then at Abita New Orleans from 2 pm - 4 pm. Meet some
-              of our adorable adoptable pups, grab some delicious brews, and help us save some lives!
+          <div className="text-black mt-8">
+            <h3 className="text-4xl font-bold">Sat. Aug. 16th</h3>
+            <h3 className="text-2xl font-bold">
+              Jefferson Feed 11am-1pm
+              <a href="https://maps.app.goo.gl/9PpP3iVhZNG8cbKY8" target="_blank" rel="noreferrer noopener">
+                <PiMapTrifold className="inline-block ml-2" />
+              </a>
+            </h3>
+            <h3 className="text-2xl font-bold">
+              Abita New Orleans 2pm-4pm
+              <a href="https://maps.app.goo.gl/HeewWKy52e17Xfph6" target="_blank" rel="noreferrer noopener">
+                <PiMapTrifold className="inline-block ml-2" />
+              </a>
+            </h3>
+            <p className="text-xl">
+              Come join us at Jefferson Feed from 11 am - 1 pm and then Abita New Orleans from 2 pm - 4 pm. Meet some of
+              our adorable adoptable pups, grab some delicious brews, and help us save some lives!
             </p>
           </div>
         </div>
+        <div>
+          <img src="/furbebe.jpg" alt="Mid City Mutt Mamas" className="w-96 h-48 mx-auto" />
+          <div className="flex items-center justify-center gap-8">
+            <img src="/abita.jpg" alt="Mid City Mutt Mamas" className="w-48 h-48 rounded-full my-4" />
+            <img src="/jefferson-feed.png" alt="Mid City Mutt Mamas" className="w-48 h-48 my-4" />
+          </div>
+        </div>
       </section>
+
       {/* Adoptable Dogs Section */}
       <section className="text-center py-8 px-4 bg-white border-b border-gray-200">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Adoptable Dogs</h2>
