@@ -1,6 +1,14 @@
 import { Link } from 'react-router';
 import { FaHeart } from 'react-icons/fa';
-import { FACEBOOK_URL, INSTAGRAM_URL, PAYPAL_URL, VENMO_URL, ZEFFY_URL } from '~/utils/constants';
+import {
+  AMAZON_URL,
+  CHEWY_URL,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  PAYPAL_URL,
+  VENMO_URL,
+  ZEFFY_URL,
+} from '~/utils/constants';
 import SectionSpecial from '~/components/SectionSpecial/SectionSpecial';
 
 function Donate() {
@@ -70,7 +78,7 @@ function Donate() {
         </section>
       </div>
       <SectionSpecial>
-        <div className="flex-grow max-w-[1280px] mx-auto px-4 py-8 space-y-12">
+        <div className="flex-grow max-w-4xl mx-auto px-4 py-8 space-y-12">
           {/* How Your Donation Helps */}
           <section className="bg-white rounded-lg p-8 shadow-sm">
             <h2 className="text-3xl font-bold mb-8 text-gray-800">How Your Donation Helps</h2>
@@ -106,11 +114,26 @@ function Donate() {
             </div>
           </section>
         </div>
+        {/* Giving section */}
+        <div className="p-8 relative">
+          <img
+            src="/maje-banner.jpeg"
+            alt="Mid City Mutt Mamas"
+            className="w-full h-full object-cover absolute inset-0 object-[0%_93%]"
+          />
+          <div className="flex">
+            <div className="flex-1"></div>
+            <div className="flex-1 relative z-10 py-22">
+              <h2 className="text-6xl text-white font-bold mb-6 text-gray-800">Other Ways to Help</h2>
+              <p className="text-gray-900 text-2xl mb-1">Learn about all the ways you can support our pets.</p>
+              <p className="text-gray-900 text-2xl">Shop to support the pups, get involved, spread the word!</p>
+            </div>
+          </div>
+        </div>
         {/* Other Ways to Help */}
-        <div className="p-8">
-          <h2 className="text-3xl text-center text-white font-bold mb-8 text-gray-800">Other Ways to Help</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <div className="p-8 bg-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Volunteer</h3>
               <p className="text-gray-600 mb-4">
                 We&apos;re always looking for volunteers to help with dog walking, fostering, and events. Contact us to
@@ -123,7 +146,7 @@ function Donate() {
                 Contact Us →
               </Link>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Spread the Word</h3>
               <p className="text-gray-600 mb-4">
                 Follow us on social media and share our posts to help us reach more potential adopters and supporters.
@@ -144,6 +167,28 @@ function Donate() {
                   className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
                 >
                   Instagram →
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">View our Wishlists</h3>
+              <p className="text-gray-600 mb-4">View MMM's wishlists for much needed items!</p>
+              <div className="flex gap-4">
+                <a
+                  href={AMAZON_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+                >
+                  Amazon →
+                </a>
+                <a
+                  href={CHEWY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+                >
+                  Chewy →
                 </a>
               </div>
             </div>
