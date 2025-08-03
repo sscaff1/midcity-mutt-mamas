@@ -119,14 +119,18 @@ function Donate() {
           <img
             src="/maje-banner.jpeg"
             alt="Mid City Mutt Mamas"
-            className="w-full h-full object-cover absolute inset-0 object-[0%_93%]"
+            className="w-full h-full object-cover absolute inset-0 object-[0%_0%] sm:object-[0%_93%]"
           />
           <div className="flex">
-            <div className="flex-1"></div>
-            <div className="flex-1 relative z-10 py-22">
+            <div className="sm:flex-1"></div>
+            <div className="flex-1 relative z-10 py-4 sm:py-22">
               <h2 className="text-6xl text-white font-bold mb-6 text-gray-800">Other Ways to Help</h2>
-              <p className="text-gray-900 text-2xl mb-1">Learn about all the ways you can support our pets.</p>
-              <p className="text-gray-900 text-2xl">Shop to support the pups, get involved, spread the word!</p>
+              <p className="text-white sm:text-gray-900 text-2xl mb-1">
+                Learn about all the ways you can support our pets.
+              </p>
+              <p className="text-white sm:text-gray-900 text-2xl">
+                Shop to support the pups, get involved, spread the word!
+              </p>
             </div>
           </div>
         </div>
