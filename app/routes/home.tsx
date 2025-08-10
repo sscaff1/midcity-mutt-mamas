@@ -74,20 +74,6 @@ function Home() {
         <div>
           <h2 className="text-5xl font-bold mb-4 text-black">Upcoming Events</h2>
           <div className="text-black">
-            <h3 className="text-4xl font-bold">Sat. Aug. 9th | 9-11am</h3>
-            <h3 className="text-2xl font-bold">
-              Fur BeBe
-              <a href="https://maps.app.goo.gl/itFGrUffiSZGdKNg8" target="_blank" rel="noreferrer noopener">
-                <PiMapTrifold className="inline-block ml-2" />
-              </a>
-            </h3>
-            <p className="text-xl">
-              We'll be at Fur BeBe on Saturday Aug. 9th from 9-11am! Join us to meet some adoptable pups and listen to
-              live tunes by Craig Cortello.
-            </p>
-          </div>
-
-          <div className="text-black mt-8">
             <h3 className="text-4xl font-bold">Sat. Aug. 16th</h3>
             <h3 className="text-2xl font-bold">
               Jefferson Feed 11am-1pm
