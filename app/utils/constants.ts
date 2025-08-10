@@ -8,3 +8,4 @@ export const PAYPAL_URL = 'https://www.paypal.com/donate/?hosted_button_id=4STQT
 export const AMAZON_URL = 'https://www.amazon.com/hz/wishlist/ls/27V5WSUMHTXBM';
 export const CHEWY_URL =
   'https://www.chewy.com/g/krewe-of-mid-city-mutt-mamas_b98480204#wish-list&wishlistsortby=DEFAULT';
+export const NEWSLETTER_URL = 'https://www.zeffy.com/en-US/newsletter-form/sign-up-for-our-newsletter-254';

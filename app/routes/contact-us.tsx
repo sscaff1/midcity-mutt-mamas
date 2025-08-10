@@ -1,4 +1,4 @@
-import { EMAIL_URL, ETSY_URL, FACEBOOK_URL, INSTAGRAM_URL } from '~/utils/constants';
+import { EMAIL_URL, ETSY_URL, FACEBOOK_URL, INSTAGRAM_URL, NEWSLETTER_URL } from '~/utils/constants';
 
 function ContactUs() {
   return (
@@ -29,7 +29,9 @@ function ContactUs() {
                 <h3 className="text-xl font-semibold text-gray-800">Email Us</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                For general inquiries, adoption questions, or to learn more about our organization, please email us at:
+                For general inquiries, adoption questions, or to learn more about our organization, please email us. We
+                typically respond to emails within 24-48 hours. For urgent matters regarding animal welfare or
+                emergencies, please call your local animal control or emergency services.
               </p>
               <a
                 href={`mailto:${EMAIL_URL}`}
@@ -40,13 +42,19 @@ function ContactUs() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
-                <i className="bi bi-clock-fill text-[#5f8576] text-2xl mr-3"></i>
-                <h3 className="text-xl font-semibold text-gray-800">Response Time</h3>
+                <i className="bi bi-envelope-fill text-[#5f8576] text-2xl mr-3"></i>
+                <h3 className="text-xl font-semibold text-gray-800">Join our Newsletter</h3>
               </div>
-              <p className="text-gray-600">
-                We typically respond to emails within 24-48 hours. For urgent matters regarding animal welfare or
-                emergencies, please call your local animal control or emergency services.
+              <p className="text-gray-600 mb-4">
+                Want to keep up with the cutest pups in town? You&apos;ll get the inside scoop on our adoptable dogs,
+                rescue stories, training tips, and plenty more tail wagging content.
               </p>
+              <a
+                href={NEWSLETTER_URL}
+                className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+              >
+                Sign Up →
+              </a>
             </div>
           </div>
         </section>
