@@ -125,12 +125,14 @@ function Donate() {
             <div className="sm:flex-1"></div>
             <div className="flex-1 relative z-10 py-4 sm:py-22">
               <h2 className="text-6xl text-white font-bold mb-6 text-gray-800">Other Ways to Help</h2>
-              <p className="text-white sm:text-gray-900 text-2xl mb-1">
-                Learn about all the ways you can support our pets.
-              </p>
-              <p className="text-white sm:text-gray-900 text-2xl">
-                Shop to support the pups, get involved, spread the word!
-              </p>
+              <div className="pb-24 sm:p-0">
+                <p className="text-white sm:text-gray-900 text-2xl mb-1">
+                  Learn about all the ways you can support our pets.
+                </p>
+                <p className="text-white sm:text-gray-900 text-2xl">
+                  Shop to support the pups, get involved, spread the word!
+                </p>
+              </div>
             </div>
           </div>
         </div>

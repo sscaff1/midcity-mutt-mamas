@@ -94,7 +94,6 @@ function Home() {
           </div>
         </div>
         <div>
-          <img src="/furbebe.jpg" alt="Mid City Mutt Mamas" className="w-96 h-48 mx-auto" />
           <div className="flex items-center justify-center gap-8">
             <img src="/abita.jpg" alt="Mid City Mutt Mamas" className="w-48 h-48 rounded-full my-4" />
             <img src="/jefferson-feed.png" alt="Mid City Mutt Mamas" className="w-48 h-48 my-4" />
