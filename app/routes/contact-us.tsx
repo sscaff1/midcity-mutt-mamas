@@ -1,4 +1,4 @@
-import { EMAIL_URL, ETSY_URL, FACEBOOK_URL, INSTAGRAM_URL, NEWSLETTER_URL } from '~/utils/constants';
+import { EMAIL_URL, ETSY_URL, FACEBOOK_URL, INSTAGRAM_URL } from '~/utils/constants';
 
 function ContactUs() {
   return (
@@ -49,12 +49,13 @@ function ContactUs() {
                 Want to keep up with the cutest pups in town? You&apos;ll get the inside scoop on our adoptable dogs,
                 rescue stories, training tips, and plenty more tail wagging content.
               </p>
-              <a
-                href={NEWSLETTER_URL}
-                className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
-              >
-                Sign Up →
-              </a>
+              <div className="h-[250px] sm:h-[220px] w-full relative overflow-hidden bg-transparent">
+                <iframe
+                  title="Signup form powered by Zeffy"
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.zeffy.com/en-US/embed/newsletter-form/sign-up-for-our-newsletter-254"
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>
