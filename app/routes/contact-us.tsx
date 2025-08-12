@@ -35,7 +35,7 @@ function ContactUs() {
               </p>
               <a
                 href={`mailto:${EMAIL_URL}`}
-                className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+                className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-xs sm:text-sm whitespace-nowrap px-5 py-2.5 me-2 mb-2 focus:outline-none"
               >
                 {EMAIL_URL} →
               </a>
@@ -49,7 +49,7 @@ function ContactUs() {
                 Want to keep up with the cutest pups in town? You&apos;ll get the inside scoop on our adoptable dogs,
                 rescue stories, training tips, and plenty more tail wagging content.
               </p>
-              <div className="h-[250px] sm:h-[220px] w-full relative overflow-hidden bg-transparent">
+              <div className="h-[280px] sm:h-[220px] w-full relative overflow-hidden bg-transparent">
                 <iframe
                   title="Signup form powered by Zeffy"
                   className="absolute inset-0 w-full h-full"
@@ -69,7 +69,7 @@ function ContactUs() {
               <p className="text-gray-600 mb-4">
                 Stay updated with our latest news, events, and available dogs by following us on social media.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={FACEBOOK_URL}
                   target="_blank"
@@ -82,7 +82,7 @@ function ContactUs() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-xs sm:text-sm whitespace-nowrap px-5 py-2.5 me-2 mb-2 focus:outline-none"
                 >
                   Instagram →
                 </a>
@@ -98,7 +98,7 @@ function ContactUs() {
                   href={ETSY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+                  className="text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-xs sm:text-sm whitespace-nowrap px-5 py-2.5 me-2 mb-2 focus:outline-none"
                 >
                   Etsy →
                 </a>
