@@ -69,38 +69,6 @@ function Home() {
           </p>
         </div>
       </section>
-      {/* Events section */}
-      <section className="py-12 px-8 relative events-root grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-5xl font-bold mb-4 text-black">Upcoming Events</h2>
-          <div className="text-black">
-            <h3 className="text-4xl font-bold">Sat. Aug. 16th</h3>
-            <h3 className="text-2xl font-bold">
-              Jefferson Feed 11am-1pm
-              <a href="https://maps.app.goo.gl/9PpP3iVhZNG8cbKY8" target="_blank" rel="noreferrer noopener">
-                <PiMapTrifold className="inline-block ml-2" />
-              </a>
-            </h3>
-            <h3 className="text-2xl font-bold">
-              Abita New Orleans 2pm-4pm
-              <a href="https://maps.app.goo.gl/HeewWKy52e17Xfph6" target="_blank" rel="noreferrer noopener">
-                <PiMapTrifold className="inline-block ml-2" />
-              </a>
-            </h3>
-            <p className="text-xl">
-              Come join us at Jefferson Feed from 11 am - 1 pm and then Abita New Orleans from 2 pm - 4 pm. Meet some of
-              our adorable adoptable pups, grab some delicious brews, and help us save some lives!
-            </p>
-          </div>
-        </div>
-        <div>
-          <div className="flex items-center justify-center gap-8">
-            <img src="/abita.jpg" alt="Mid City Mutt Mamas" className="w-48 h-48 rounded-full my-4" />
-            <img src="/jefferson-feed.png" alt="Mid City Mutt Mamas" className="w-48 h-48 my-4" />
-          </div>
-        </div>
-      </section>
-
       {/* Adoptable Dogs Section */}
       <section className="text-center py-8 px-4 bg-white border-b border-gray-200">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Adoptable Dogs</h2>
