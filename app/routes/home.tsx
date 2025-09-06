@@ -3,8 +3,9 @@ import getDogs from '../utils/getDogs';
 import getToken from '../utils/getToken';
 import Dogs from '../components/Dogs/Dogs';
 import { getFromCache, setInCache } from '~/utils/cache';
-import { PiDog, PiPawPrint, PiPiggyBank, PiMapTrifold } from 'react-icons/pi';
+import { PiDog, PiPawPrint, PiPiggyBank } from 'react-icons/pi';
 import type { Animal } from '~/types/Animal';
+import RandomDog from '../components/RandomDog/RandomDog';
 import './home.css';
 
 export async function loader() {
@@ -59,6 +60,7 @@ function Home() {
           alt="Mid City Mutt Mamas"
           className="absolute inset-0 w-full h-full object-cover scale-x-[-1] sm:object-top-right object-[30%_0%] sm:brightness-100 brightness-80"
         />
+
         <div className="relative z-10 max-w-sm">
           <h1 className="text-4xl font-bold mb-4 text-white">Welcome to Mid City Mutt Mamas</h1>
           <p className="text-xl text-white">
@@ -69,6 +71,36 @@ function Home() {
           </p>
         </div>
       </section>
+
+      {/* Silent Auction Section */}
+      <div className="px-4 py-8 max-w-[1280px] mx-auto">
+        <section className="bg-white rounded-lg p-8 shadow-sm">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">Silent Auction</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <RandomDog dogs={dogs} />
+            <div className="text-center md:text-left">
+              <p className="text-lg text-gray-700 mb-6">
+                🎉 Our Silent Auction is LIVE for the Krewe of Mid City Mutt Mamas doggos! 🐾
+              </p>
+              <p className="text-gray-600 mb-6">
+                Bid on amazing items and help us raise much-needed funds for the pups in our care. The auction is still
+                open for new items, so if you have something to donate—big or small—just DM me to add it in!
+              </p>
+              <p className="text-gray-600 mb-8">
+                Let&apos;s make a difference together. Every bid helps a dog in need 💛
+              </p>
+              <a
+                href="https://www.zeffy.com/en-US/ticketing/krewe-of-mid-city-mutt-mamass-silent-auction-3?fbclid=IwdGRjcAMpQIljbGNrAylAd2V4dG4DYWVtAjExAAEeRJPkbf7C_hHYB7QX-1UmGJc6-7llmdqa8IzGIZ5If5OGy_0EUXPF2HWD2ys_aem_XijlX0UW6UeVUGLicBQiEQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors font-semibold text-lg"
+              >
+                View Silent Auction →
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
       {/* Adoptable Dogs Section */}
       <section className="text-center py-8 px-4 bg-white border-b border-gray-200">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Adoptable Dogs</h2>
