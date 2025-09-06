@@ -80,14 +80,8 @@ function Home() {
             <RandomDog dogs={dogs} />
             <div className="text-center md:text-left">
               <p className="text-lg text-gray-700 mb-6">
-                🎉 Our Silent Auction is LIVE for the Krewe of Mid City Mutt Mamas doggos! 🐾
-              </p>
-              <p className="text-gray-600 mb-6">
-                Bid on amazing items and help us raise much-needed funds for the pups in our care. The auction is still
-                open for new items, so if you have something to donate—big or small—just DM me to add it in!
-              </p>
-              <p className="text-gray-600 mb-8">
-                Let&apos;s make a difference together. Every bid helps a dog in need 💛
+                🐾 Silent Auction is Live! Bid on unique items donated by our amazing supporters—every dollar helps the
+                doggos we serve. Hurry, bidding closes October 2nd!
               </p>
               <a
                 href="https://www.zeffy.com/en-US/ticketing/krewe-of-mid-city-mutt-mamass-silent-auction-3?fbclid=IwdGRjcAMpQIljbGNrAylAd2V4dG4DYWVtAjExAAEeRJPkbf7C_hHYB7QX-1UmGJc6-7llmdqa8IzGIZ5If5OGy_0EUXPF2HWD2ys_aem_XijlX0UW6UeVUGLicBQiEQ"
