@@ -75,9 +75,13 @@ function Home() {
       {/* Silent Auction Section */}
       <div className="px-4 py-8 max-w-[1280px] mx-auto">
         <section className="bg-white rounded-lg p-8 shadow-sm">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">Silent Auction</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <RandomDog dogs={dogs} />
+            <div className="text-center">
+              <h2 className="text-3xl text-center font-bold mb-6 text-gray-800">Silent Auction</h2>
+              <div className="mx-auto inline-block">
+                <RandomDog dogs={dogs} />
+              </div>
+            </div>
             <div className="text-center md:text-left">
               <p className="text-lg text-gray-700 mb-6">
                 🐾 Silent Auction is Live! Bid on unique items donated by our amazing supporters—every dollar helps the

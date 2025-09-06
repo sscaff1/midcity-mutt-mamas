@@ -9,7 +9,7 @@ function RandomDog({ dogs }: RandomDogProps) {
   if (!dogs || dogs.length === 0) return null;
   const randomDog = dogs[Math.floor(Math.random() * dogs.length)];
   return (
-    <div className="text-center md:text-left max-w-md mx-auto">
+    <div className="flex flex-col items-center">
       <img
         src={randomDog.photos[0].small}
         alt={`${randomDog.name} - Available for adoption`}
