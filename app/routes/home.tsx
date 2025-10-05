@@ -72,33 +72,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Silent Auction Section */}
-      <div className="px-4 py-8 max-w-[1280px] mx-auto">
-        <section className="bg-white rounded-lg p-8 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="text-center">
-              <h2 className="text-3xl text-center font-bold mb-6 text-gray-800">Silent Auction</h2>
-              <div className="mx-auto inline-block">
-                <RandomDog dogs={dogs} />
-              </div>
-            </div>
-            <div className="text-center md:text-left">
-              <p className="text-lg text-gray-700 mb-6">
-                🐾 Silent Auction is Live! Bid on unique items donated by our amazing supporters—every dollar helps the
-                doggos we serve. Hurry, bidding closes October 2nd!
-              </p>
-              <a
-                href="https://www.zeffy.com/en-US/ticketing/krewe-of-mid-city-mutt-mamass-silent-auction-3?fbclid=IwdGRjcAMpQIljbGNrAylAd2V4dG4DYWVtAjExAAEeRJPkbf7C_hHYB7QX-1UmGJc6-7llmdqa8IzGIZ5If5OGy_0EUXPF2HWD2ys_aem_XijlX0UW6UeVUGLicBQiEQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-[#5f8576] text-white rounded-md hover:bg-[#537467] transition-colors font-semibold text-lg"
-              >
-                View Silent Auction →
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
       {/* Adoptable Dogs Section */}
       <section className="text-center py-8 px-4 bg-white border-b border-gray-200">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Adoptable Dogs</h2>
