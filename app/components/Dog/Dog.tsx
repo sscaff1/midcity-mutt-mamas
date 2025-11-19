@@ -11,7 +11,6 @@ const removeUnknown = (traits: { label: string; value: any }[]) =>
   traits.filter((trait) => trait.value && trait.value !== 'Unknown');
 
 function Dog({ dog }: DogProps) {
-  console.log(dog);
   const photos = Array.isArray(dog.photos) ? dog.photos : [dog.photos];
   const [selectedPhoto, setSelectedPhoto] = useState(photos[0]?.large || dog.primary_photo_cropped?.large || '');
 

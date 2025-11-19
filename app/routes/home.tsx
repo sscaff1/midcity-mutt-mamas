@@ -1,11 +1,9 @@
 import { Link, useLoaderData, data } from 'react-router';
 import getDogs from '../utils/getDogs';
-import getToken from '../utils/getToken';
 import Dogs from '../components/Dogs/Dogs';
 import { getFromCache, setInCache } from '~/utils/cache';
 import { PiDog, PiPawPrint, PiPiggyBank } from 'react-icons/pi';
 import type { Animal } from '~/types/Animal';
-import RandomDog from '../components/RandomDog/RandomDog';
 import './home.css';
 
 export async function loader() {
@@ -17,20 +15,9 @@ export async function loader() {
     return data(cached, { headers: { 'X-Cache': 'HIT' } });
   }
 
-  let token;
-  try {
-    token = await getToken();
-  } catch (error: unknown) {
-    if (error instanceof DOMException && error.code === 401) {
-      token = await getToken({ shouldRefetch: true });
-    }
-  }
-  if (!token) {
-    throw new Error('Failed to get token');
-  }
   let dogs;
   try {
-    dogs = await getDogs({ token });
+    dogs = await getDogs();
   } catch (error) {
     console.error(error);
     dogs = [] as Animal[];
@@ -70,6 +57,22 @@ function Home() {
             accomplished.
           </p>
         </div>
+      </section>
+
+      {/* Link to https://www.everesting4rescue.com/ */}
+      <section className="text-center py-8 px-4 bg-white border-b border-gray-200">
+        <h2 className="text-3xl font-bold mb-6 text-gray-800">Everesting 4 Rescues</h2>
+        <p className="text-gray-600 mb-4">
+          Join us for Everesting 4 Rescues, a fundraiser event on December 20th that benefits Mid City Mutt Mamas.
+        </p>
+        <a
+          href="https://www.everesting4rescue.com/"
+          className="inline-block px-6 py-3 rounded-md text-white bg-[#5f8576] hover:bg-[#537467] transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn More About the Event
+        </a>
       </section>
 
       {/* Adoptable Dogs Section */}
