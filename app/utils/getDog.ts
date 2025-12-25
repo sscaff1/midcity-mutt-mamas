@@ -6,7 +6,7 @@ const getDog = async ({ id }: { id: string }): Promise<Animal> => {
   if (!graphqlAnimal) {
     throw new Error(`Animal with id ${id} not found`);
   }
-  return mapGraphQLAnimalToAnimal(graphqlAnimal);
+  return await mapGraphQLAnimalToAnimal(graphqlAnimal);
 };
 
 export default getDog;

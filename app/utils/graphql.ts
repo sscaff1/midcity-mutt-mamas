@@ -15,7 +15,6 @@ export const SEARCH_ANIMALS_QUERY = `
       animals {
         animalId
         animalName
-        primaryPhotoId
         description
         physical {
           vaccinated
@@ -55,14 +54,27 @@ export const SEARCH_ANIMALS_QUERY = `
         publicUrl {
           url
         }
-        _media {
-          mediaUrl
-          thumbnailUrl
-        }
       }
     }
   }
 `;
+
+// GraphQL query for getting media for an animal
+export const GET_MEDIA_FOR_ANIMAL_QUERY = `
+  query GetMediaForAnimal($animalId: String!) {
+    getMediaForAnimal(animalId: $animalId) {
+      mediaId
+      mediaFormat
+    }
+  }
+`;
+
+interface GetMediaForAnimalResponse {
+  getMediaForAnimal: Array<{
+    mediaId: string;
+    mediaFormat: string;
+  }>;
+}
 
 interface SearchAnimalResponse {
   searchAnimal: {
@@ -74,7 +86,6 @@ interface SearchAnimalResponse {
 export interface GraphQLAnimal {
   animalId: string;
   animalName: string;
-  primaryPhotoId?: string;
   description?: string;
   physical?: {
     vaccinated?: boolean;
@@ -114,29 +125,39 @@ export interface GraphQLAnimal {
   publicUrl?: {
     url?: string;
   };
-  _media?: Array<{
-    mediaUrl?: string;
-    thumbnailUrl?: string;
-  }>;
 }
 
-// Helper function to construct photo URL from photoId
-const getPhotoUrl = (photoId?: string): string => {
-  if (!photoId) return '';
-  return `${S3_URL}${photoId}`;
+// Helper function to construct media URL
+const getMediaUrl = (animalId: string, mediaId: string, mediaFormat: string): string => {
+  // Convert jpeg to jpg for the file extension
+  const fileExtension = mediaFormat === 'jpeg' ? 'jpg' : mediaFormat;
+  return `${S3_URL}animal/${animalId}/image/${mediaId}.${fileExtension}`;
+};
+
+// Fetch media for an animal
+export const getMediaForAnimal = async (animalId: string): Promise<Array<{ mediaId: string; mediaFormat: string }>> => {
+  const variables = {
+    animalId,
+  };
+
+  const data = await executeGraphQLQuery<GetMediaForAnimalResponse>(GET_MEDIA_FOR_ANIMAL_QUERY, variables);
+  return data.getMediaForAnimal;
 };
 
 // Map GraphQL animal response to Animal type
-export const mapGraphQLAnimalToAnimal = (graphqlAnimal: GraphQLAnimal): Animal => {
+export const mapGraphQLAnimalToAnimal = async (graphqlAnimal: GraphQLAnimal): Promise<Animal> => {
   if (!graphqlAnimal) {
     throw new Error('Cannot map undefined GraphQL animal');
   }
-  // Use primaryPhotoId to construct primary photo, or use first photo from media
-  const primaryPhotoId = graphqlAnimal.primaryPhotoId;
-  const firstMedia = graphqlAnimal._media?.[0];
-  const primaryPhotoUrl = primaryPhotoId
-    ? getPhotoUrl(primaryPhotoId)
-    : firstMedia?.mediaUrl || firstMedia?.thumbnailUrl || '';
+
+  // Fetch media for this animal
+  const mediaList = await getMediaForAnimal(graphqlAnimal.animalId);
+
+  // Use first photo from media for primary photo (media is always defined)
+  const firstMedia = mediaList[0];
+  const primaryPhotoUrl = firstMedia
+    ? getMediaUrl(graphqlAnimal.animalId, firstMedia.mediaId, firstMedia.mediaFormat)
+    : '';
   const primaryPhoto = primaryPhotoUrl
     ? {
         small: primaryPhotoUrl,
@@ -151,12 +172,16 @@ export const mapGraphQLAnimalToAnimal = (graphqlAnimal: GraphQLAnimal): Animal =
         full: '',
       };
 
-  const photos = (graphqlAnimal._media || []).map((media) => ({
-    small: media.thumbnailUrl || '',
-    medium: media.mediaUrl || media.thumbnailUrl || '',
-    large: media.mediaUrl || media.thumbnailUrl || '',
-    full: media.mediaUrl || media.thumbnailUrl || '',
-  }));
+  // Map media to photos using the new URL format
+  const photos = mediaList.map((media) => {
+    const mediaUrl = getMediaUrl(graphqlAnimal.animalId, media.mediaId, media.mediaFormat);
+    return {
+      small: mediaUrl,
+      medium: mediaUrl,
+      large: mediaUrl,
+      full: mediaUrl,
+    };
+  });
 
   const videos: string[] = [];
   return {
@@ -256,7 +281,6 @@ export const searchAnimals = async (pageSize: number = 100, fromPage: number = 0
 
 // Get a single animal by ID using GraphQL
 export const getAnimalById = async (animalId: string): Promise<GraphQLAnimal | undefined> => {
-  console.log('getAnimalById called with:', { animalId });
   const variables = {
     pagination: {
       fromPage: 0,
@@ -271,10 +295,5 @@ export const getAnimalById = async (animalId: string): Promise<GraphQLAnimal | u
   };
 
   const data = await executeGraphQLQuery<SearchAnimalResponse>(SEARCH_ANIMALS_QUERY, variables);
-  console.log('getAnimalById result:', {
-    animalId,
-    totalCount: data.searchAnimal.totalCount,
-    animals: data.searchAnimal.animals,
-  });
   return data.searchAnimal.animals[0];
 };

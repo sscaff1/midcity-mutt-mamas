@@ -12,10 +12,8 @@ const removeUnknown = (traits: { label: string; value: any }[]) =>
   traits.filter((trait) => trait.value && trait.value !== 'Unknown');
 
 function Dog({ dog }: DogProps) {
-  // const photos = Array.isArray(dog.photos) ? dog.photos : [dog.photos];
-  const photos: { small: string; medium: string; large: string; full: string }[] = [];
-  // const [selectedPhoto, setSelectedPhoto] = useState(photos[0]?.large || dog.primary_photo_cropped?.large || '');
-  const [selectedPhoto, setSelectedPhoto] = useState(dog.primary_photo_cropped?.large || '');
+  const photos = Array.isArray(dog.photos) ? dog.photos : [dog.photos];
+  const [selectedPhoto, setSelectedPhoto] = useState(photos[0]?.large || dog.primary_photo_cropped?.large || '');
   const traits = useMemo(
     () =>
       removeUnknown([
