@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { Animal } from '../../types/Animal';
 import './Dog.css';
+import { PETFINDER_URL } from '../../utils/constants';
 
 interface DogProps {
   dog: Animal;
@@ -11,9 +12,10 @@ const removeUnknown = (traits: { label: string; value: any }[]) =>
   traits.filter((trait) => trait.value && trait.value !== 'Unknown');
 
 function Dog({ dog }: DogProps) {
-  const photos = Array.isArray(dog.photos) ? dog.photos : [dog.photos];
-  const [selectedPhoto, setSelectedPhoto] = useState(photos[0]?.large || dog.primary_photo_cropped?.large || '');
-
+  // const photos = Array.isArray(dog.photos) ? dog.photos : [dog.photos];
+  const photos: { small: string; medium: string; large: string; full: string }[] = [];
+  // const [selectedPhoto, setSelectedPhoto] = useState(photos[0]?.large || dog.primary_photo_cropped?.large || '');
+  const [selectedPhoto, setSelectedPhoto] = useState(dog.primary_photo_cropped?.large || '');
   const traits = useMemo(
     () =>
       removeUnknown([
@@ -95,7 +97,7 @@ function Dog({ dog }: DogProps) {
           <p className="dog-description">{dog.description}</p>
           <a
             className="inline-block mt-6 text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
-            href={dog.url}
+            href={`${PETFINDER_URL}${dog.url}`}
             target="_blank"
             rel="noreferrer noopener"
           >

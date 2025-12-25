@@ -37,7 +37,7 @@ export interface Animal {
     cats: boolean | null;
   };
   gender: 'Male' | 'Female';
-  id: number;
+  id: string;
   name: string;
   organization_animal_id: string | null;
   organization_id: string;
