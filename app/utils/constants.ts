@@ -14,3 +14,6 @@ export const S3_URL = 'https://dbw3zep4prcju.cloudfront.net/';
 export const PETFINDER_URL = 'https://www.petfinder.com/';
 export const ORGANIZATION_ID = '6373d4f4-4329-4fa4-b723-24a12f29ae97';
 export const STATUS = 'adoptable';
+export const MAILGUN_API_BASE = 'https://api.mailgun.net/v3';
+export const MAILGUN_DOMAIN = 'mg.midcitymutt.org';
+export const MAILGUN_FROM_ADDRESS = 'Mid City Mutt Mamas <noreply@mg.midcitymutt.org>';

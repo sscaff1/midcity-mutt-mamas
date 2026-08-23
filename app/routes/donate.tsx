@@ -22,8 +22,8 @@ function Donate() {
       <title>Donate | Mid City Mutt Mamas</title>
       {/* Hero Section */}
       <section className="text-center py-8 px-4 bg-[#5f8576]">
-        <h1 className="text-4xl font-bold mb-4 text-white-800">Support Our Mission</h1>
-        <p className="text-xl text-white-600 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4 text-white">Support Our Mission</h1>
+        <p className="text-xl text-white/90 max-w-2xl mx-auto">
           At Mid City Mutt, we passionately rescue dogs from high-kill shelters, abandoned in the streets, or on country
           roads. We also take in owner surrenders, providing them with the vetting, training, and love they deserve. We
           are a 501(c)(3) nonprofit organization dedicated to saving dogs. Your donation helps us give these deserving
