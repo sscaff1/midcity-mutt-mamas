@@ -7,5 +7,6 @@ export default [
   route('meet-the-mamas', './routes/meet-the-mamas.tsx'),
   route('adopt', './routes/adopt.tsx'),
   route('foster', './routes/foster.tsx'),
+  route('foster-application', './routes/foster-application.ts'),
   ...prefix('dogs', [route(':dogId', './routes/dogs/dog.tsx')]),
 ] satisfies RouteConfig;

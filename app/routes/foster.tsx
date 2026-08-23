@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import FosterApplicationForm from '~/components/FosterApplicationForm/FosterApplicationForm';
 
 function Foster() {
   return (
@@ -21,15 +22,20 @@ function Foster() {
             </p>
             <a
               className="inline-block mt-6 text-white bg-[#9d4837] hover:bg-[#7e3a2c] focus:ring-4 focus:ring-[#b16d5f] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
-              target="_blank"
-              href="/foster-app.pdf"
-              rel="noreferrer noopener"
+              href="#apply"
             >
-              Download Foster Application
+              Apply Online
             </a>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Download the above application and email it to{' '}
-              <a href="mailto:midcitymutt@gmail.com">midcitymutt@gmail.com</a>
+              Fill out our{' '}
+              <a href="#apply" className="font-bold text-[#5f8576] hover:text-[#0a7372]">
+                application
+              </a>
+              , or{' '}
+              <a target="_blank" href="/foster-app.pdf" rel="noreferrer noopener" className="underline">
+                download the PDF
+              </a>{' '}
+              and email it to <a href="mailto:midcitymutt@gmail.com">midcitymutt@gmail.com</a>
             </p>
           </section>
           <section className="flex items-center justify-center">
@@ -195,6 +201,15 @@ function Foster() {
               </p>
             </div>
           </div>
+        </section>
+
+        {/* Foster Application */}
+        <section id="apply" className="bg-white rounded-lg p-8 shadow-sm scroll-mt-4">
+          <h2 className="text-3xl font-bold mb-2 text-gray-800">Foster Application</h2>
+          <p className="text-gray-600 mb-8">
+            Fill out the application below and submit it &mdash; we&apos;ll receive it right away by email.
+          </p>
+          <FosterApplicationForm />
         </section>
 
         {/* Call to Action */}
